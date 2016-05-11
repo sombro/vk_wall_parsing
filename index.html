@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>VK API test</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href="css/style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="panel panel-default">
+			  <div class="panel-heading">Получение записей из VK</div>
+			  <div class="panel-body">
+			    <div class="form-group">
+						<label for="groups">Группа</label>
+						<select class="x-group_id form-control" id="groups">
+							<option value="54177521">https://new.vk.com/poputnye_gruzy</option>
+							<option value="87971654">http://vk.com/play_dalnoboy_logistic</option>
+							<option value="88188819">https://vk.com/club88188819</option>
+							<option value="16101478">https://new.vk.com/gruzporf1</option>
+							<option value="88188819">https://new.vk.com/club88188819</option>
+							<option value="71179449">https://new.vk.com/club71179449</option>
+							<option value="78869240">https://new.vk.com/vozoton</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="number">Кол-во записей (max 100)</label>
+						<input class="x-number form-control" type="number" value="100" max="100" min="0" id="number">
+					</div>
+					<div class="form-group">
+						<label for="type">Тип записей</label>
+						<select class="x-type form-control" id="type">
+							<option value="others">записи на стене от НЕ владельца</option>
+							<option value="owner">записи на стене от ее владельца</option>
+							<option value="all">все записи на стене</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<button class="x-wall btn btn-primary" type="button">Получить записи со стены</button>
+					</div>
+			  </div>
+			</div>
+			<div class="form-group">
+				<button class="x-download btn btn-info" type="button">Cкачать в .csv</button>
+			</div>
+			<div>
+				<table class="x-table table table-striped table-bordered">
+					<tr>
+						<th>Ссылка на профиль</th>
+						<th>Текст</th>
+						<th>Дата</th>
+					</tr>
+				</table>
+			</div>
+			<script type="text/javascript" src="https://yandex.st/jquery/1.11.2/jquery.min.js" charset="UTF-8"></script>
+			<script type="text/javascript" src="http://www.kunalbabre.com/projects/table2CSV.js" ></script>
+			<script type="text/javascript" src="js/script.js" charset="UTF-8"></script>
+		</div>
+	</body>
+</html>
